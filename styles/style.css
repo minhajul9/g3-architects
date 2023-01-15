@@ -11,14 +11,15 @@ body {
     width: 80%;
 }
 
-section{
+section {
     margin-top: 80px;
 }
 
-.section-title{
+.section-title {
     font-weight: 700;
     font-size: 45px;
 }
+
 /* header styles */
 .header {
     background-color: #FF900E1A;
@@ -85,71 +86,72 @@ section{
     margin-bottom: 50px;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.feature-list{
+.feature-list {
     display: flex;
     align-items: center;
     gap: 75px;
     justify-content: center;
 }
 
-.feature-images{
+.feature-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.gray-span{
+.gray-span {
     font-weight: 500;
     color: #727272;
 }
 
-.orange-span{
+.orange-span {
     color: #FF900E;
 }
 
-.feature-description, .card-description{
+.feature-description,
+.card-description {
     font-weight: 400;
     font-size: 16px;
     color: #727272;
     max-width: 560px;
 }
 
-.feature-enjoy{
+.feature-enjoy {
     display: flex;
     gap: 147px;
     align-items: center;
 }
 
-.feature-enjoy-text .section-title{
+.feature-enjoy-text .section-title {
     padding-left: 22px;
     border-left: 5px solid #FF900E;
 }
 
-.feature-card{
+.feature-card {
     box-shadow: 2px 2px 10px rgb(183, 181, 181);
     border-radius: 8px;
     padding: 30px;
     margin-top: 20px;
 }
 
-.card-title{
+.card-title {
     font-weight: 600;
     font-size: 20px;
 }
 
-.btn-explore span{
+.btn-explore span {
     font-weight: 700;
     font-size: 65px;
 }
 
-.btn-position{
+.btn-position {
     position: relative;
     top: -130px;
     left: -50px;
@@ -158,12 +160,42 @@ main{
     padding: 45px;
 }
 
-.feature-enjoy-img img{
+.feature-enjoy-img img {
     width: 100%;
     margin-top: 70px;
 }
 
+.facts .section-title{
+    margin-top: 0;
+}
 
+.facts-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 125px;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.facts-card {
+    width: 241.83px;
+    height: 241.83px;
+    text-align: center;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+}
+
+.facts-card img {
+    margin-top: 40px;
+}
+
+.facts-card h2 {
+    font-weight: 600;
+    font-size: 45px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 
 /* small devices */
@@ -179,24 +211,29 @@ main{
         align-items: center;
     }
 
-    .feature-list{
+    .feature-list {
         flex-direction: column;
     }
-    .feature-images{
+
+    .feature-images {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .feature-enjoy{
+    .feature-enjoy {
         flex-direction: column;
     }
 
-    .feature-enjoy-img img{
+    .feature-enjoy-img img {
         margin-top: 30px;
     }
 
-    .btn-position{
+    .btn-position {
         scale: 0.5;
         left: -30px;
+    }
+
+    .facts-cards {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -211,9 +248,19 @@ main{
         gap: 20px;
     }
 
-    .feature-list{
+    .feature-list {
         flex-direction: column;
     }
 
-    
+    .feature-enjoy {
+        flex-direction: column;
+    }
+
+    .feature-enjoy-img img {
+        margin-top: 30px;
+    }
+
+    .facts-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
