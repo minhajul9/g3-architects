@@ -93,6 +93,11 @@ main {
     align-items: center;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
 .feature-list {
     display: flex;
     align-items: center;
@@ -116,7 +121,7 @@ main {
 }
 
 .feature-description,
-.card-description {
+.section-description {
     font-weight: 400;
     font-size: 16px;
     color: #727272;
@@ -165,7 +170,7 @@ main {
     margin-top: 70px;
 }
 
-.facts .section-title{
+.facts .section-title {
     margin-top: 0;
 }
 
@@ -183,10 +188,12 @@ main {
     text-align: center;
     border: 1px solid #FF900E;
     border-radius: 8px;
+    transition: scale 1s, box-shadow 500ms;
 }
 
 .facts-card img {
     margin-top: 40px;
+
 }
 
 .facts-card h2 {
@@ -195,6 +202,93 @@ main {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+.facts-card:hover {
+    scale: 1.5;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.contact{
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    color: white;
+}
+
+.color-overlay{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    padding-top: 38px;
+}
+
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    padding: 50px;
+    
+}
+
+.contacts-column{
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.contact-title{
+    font-size: 30px;
+}
+
+.contacts-column input, .contacts-column textarea{
+    width: 75%; 
+    margin: 20px;
+    margin-right: 0;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.contacts-column .fa-brands{
+    margin: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.send-mail{
+    text-align: right;
+}
+
+
+.sponsors {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sponsors-icon {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.sponsors-icon img {
+    filter: grayscale(100%);
+}
+
+footer .container {
+    text-align: center;
+    background: #FFF4E7;
+    border-radius: 8px;
+    margin-top: 130px;
+    margin-bottom: 180px;
+}
+
+.footer-text {
+    margin: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #424242;
 }
 
 
@@ -235,6 +329,15 @@ main {
     .facts-cards {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .sponsors-icon {
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
+    .contacts{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
@@ -262,5 +365,18 @@ main {
 
     .facts-cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsors-icon {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .contacts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #send-mail{
+        grid-row: span;
+        text-align: center;
+        width: 100%;
     }
 }
